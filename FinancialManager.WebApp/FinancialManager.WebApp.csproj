@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FinancialManager.Business\FinancialManager.Business.csproj" />
+    <ProjectReference Include="..\FinancialManager.Infra\FinancialManager.Infra.csproj" />
+  </ItemGroup>
+
 </Project>
