@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace FinancialManager.Business.Models.Enums
 {
-    public enum PaymentType
+    public enum LogType
     {
-        None = 0,
+        None = 1
     }
 }
