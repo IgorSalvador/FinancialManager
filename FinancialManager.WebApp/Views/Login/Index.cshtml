@@ -1,0 +1,58 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "SignIn";
+}
+
+<div class="d-flex justify-content-center align-items-center box-shadow" style="min-height: 90vh">
+    <div class="w-100 h-50 border border-secondary border-opacity-50 rounded-4 px-4 py-3" style="max-width: 450px;">
+        
+        <section class="mb-3">
+            <h1 class="fw-semibold text-center">Financial Manager</h1>
+            <div class="text-center mt-3">
+                <span class="fs-5 fw-semibold text-secondary">
+                    Bem-vindo à sua aplicação de gestão financeira!
+                </span>
+                <p class="mt-2 text-muted">
+                    Organize suas finanças de forma simples, rápida e segura.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+            {
+                <div class="row mb-2">
+                    <div class="col-md-12">
+                        <label asp-for="Username" class="form-label"></label>
+                        <input asp-for="Username" class="form-control"/>
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <label asp-for="Password" class="form-label"></label>
+                        <input asp-for="Password" class="form-control"/>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="mb-1">
+                    <div class="mb-3">
+                        <button class="btn btn-primary w-100">
+                            <i class="bi bi-box-arrow-in-right"></i> Iniciar Sessão
+                        </button>
+                    </div>
+
+                    <span class="mb-3 d-block text-center">----------- ou -----------</span>
+
+                    <div class="mb-3">
+                        <a class="btn btn-primary w-100" href="#">
+                            <i class="bi bi-microsoft"></i> Iniciar Sessão
+                        </a>
+                    </div>
+                </div>
+            }
+        </section>
+    </div>
+</div>
